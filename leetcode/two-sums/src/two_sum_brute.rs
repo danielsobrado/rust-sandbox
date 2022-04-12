@@ -9,6 +9,7 @@ struct Solution;
 // You can return the answer in any order.
 // Solution:
 // 2 nested loops, using brute force
+// Complexity: O(n^2) time, O(1) space
 impl Solution {
     fn two_sum_brute(nums: Vec<i32>, target: i32) -> Vec<i32> {
         for (pos, e) in nums.iter().enumerate() {
