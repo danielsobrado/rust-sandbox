@@ -11,3 +11,4 @@
 #![allow(clippy::needless_collect)]
 
 mod two_sum_brute;
+mod two_sum;
