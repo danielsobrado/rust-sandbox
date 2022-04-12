@@ -10,4 +10,4 @@
 #![allow(clippy::mutex_atomic)]
 #![allow(clippy::needless_collect)]
 
-mod two_sums;
+mod two_sum_brute;
