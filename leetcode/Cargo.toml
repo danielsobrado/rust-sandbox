@@ -1,0 +1,13 @@
+[package]
+name = "rust-sandbox-leetcode"
+version = "0.1.0"
+authors = ["Daniel Sobrado <daniel@danielsobrado.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+rand = "0.8.5"
+assert_approx_eq = "1.1.0"
+paste = "1.0.3"
+pretty_assertions = "1.2.1"
+threadpool = "1.8.1"
