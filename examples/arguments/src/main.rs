@@ -1,15 +1,29 @@
 use std::env;
 
-fn parse_config(args: &[String]) -> &str {
-    let name = &args[1];
+struct Config {
+    name: String,
+}
 
-    name
+impl Config {
+    fn new(args: &[String]) -> Result<Config, &'static str> {
+
+        if args.len() < 2 {
+            return Err("not enough arguments");
+        }
+
+        let name = args[1].clone();
+
+        Ok(Config { name })
+    }
 }
 
 fn main() {
     let args: Vec<String> = env::args().collect();
 
-    let name = parse_config(&args);
+    let config = Config::new(&args).unwrap_or_else(|err| {
+        println!("Problem parsing arguments: {}", err);
+        std::process::exit(1);
+    });
 
-    println!("Hello {}!", name);
+    println!("Hello {}!", config.name);
 }
