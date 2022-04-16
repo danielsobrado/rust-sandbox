@@ -6,7 +6,10 @@ impl Solution {
         let mut closest = 1000000;
         let mut closest_index = 0;
         for i in 0..nums.len() {
-            if (nums[i] - 0).abs() < closest {
+            if (nums[i] - 0).abs() <= closest {
+                if ((nums[i] - 0).abs() == closest) && ((nums[i] - 0) < nums[closest_index]) {
+                    continue;
+                }
                 closest = (nums[i] - 0).abs();
                 closest_index = i;
             }
@@ -20,6 +23,12 @@ fn test1() {
     assert_eq!(Solution::find_closest_number(vec![-4,-2,1,4,8]), 1);
 }
 
+#[test]
 fn test2() {
     assert_eq!(Solution::find_closest_number(vec![2,-1,1]), 1);
+}
+
+#[test]
+fn test3() {
+    assert_eq!(Solution::find_closest_number(vec![-100000,-100000]), -100000);
 }
