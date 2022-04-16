@@ -23,21 +23,65 @@ impl Solution {
 
 #[test]
 fn test1() {
-    let nums = vec![2, 7, 11, 15];
-    let target = 9;
-    assert_eq!(Solution::add_two_numbers(nums, target), vec![0, 1]);
+    //  l1 = 2->4->3
+    let n = ListNode::new(3);
+    let n = ListNode { val: 4, next: Some(Box::new(n)) };
+    let n = ListNode { val: 2, next: Some(Box::new(n)) };    
+    let l1 = Some(Box::new(n));
+
+    let n = ListNode::new(4);
+    let n = ListNode { val: 6, next: Some(Box::new(n)) };
+    let n = ListNode { val: 5, next: Some(Box::new(n)) };
+    let l2 = Some(Box::new(n));
+
+    let n = ListNode::new(8);
+    let n = ListNode { val: 0, next: Some(Box::new(n)) };
+    let n = ListNode { val: 7, next: Some(Box::new(n)) };
+    let sol = Some(Box::new(n));
+
+    assert_eq!(Solution::add_two_numbers(l1, l2), sol);
 }
 
 #[test]
 fn test2() {
-    let nums = vec![3, 2, 4];
-    let target = 6;
-    assert_eq!(Solution::add_two_numbers(nums, target), vec![1, 2]);
+  let n = ListNode::new(0);
+  let l1 = Some(Box::new(n));
+
+  let n = ListNode::new(0);
+  let l2 = Some(Box::new(n));
+
+  let n = ListNode::new(0);
+  let sol = Some(Box::new(n));
+
+  assert_eq!(Solution::add_two_numbers(l1, l2), sol);
 }
 
 #[test]
 fn test3() {
-    let nums = vec![3, 3];
-    let target = 6;
-    assert_eq!(Solution::add_two_numbers(nums, target), vec![0, 1]);
+  let n = ListNode::new(9);
+  let n = ListNode { val: 9, next: Some(Box::new(n)) };
+  let n = ListNode { val: 9, next: Some(Box::new(n)) };    
+  let n = ListNode { val: 9, next: Some(Box::new(n)) };
+  let n = ListNode { val: 9, next: Some(Box::new(n)) };    
+  let n = ListNode { val: 9, next: Some(Box::new(n)) };
+  let n = ListNode { val: 9, next: Some(Box::new(n)) };    
+  let l1 = Some(Box::new(n));
+
+  let n = ListNode::new(9);
+  let n = ListNode { val: 9, next: Some(Box::new(n)) };
+  let n = ListNode { val: 9, next: Some(Box::new(n)) };
+  let n = ListNode { val: 9, next: Some(Box::new(n)) };
+  let l2 = Some(Box::new(n));
+
+  let n = ListNode::new(1);
+  let n = ListNode { val: 0, next: Some(Box::new(n)) };
+  let n = ListNode { val: 0, next: Some(Box::new(n)) };
+  let n = ListNode { val: 0, next: Some(Box::new(n)) };
+  let n = ListNode { val: 9, next: Some(Box::new(n)) };
+  let n = ListNode { val: 9, next: Some(Box::new(n)) };
+  let n = ListNode { val: 9, next: Some(Box::new(n)) };
+  let n = ListNode { val: 8, next: Some(Box::new(n)) };
+  let sol = Some(Box::new(n));
+
+  assert_eq!(Solution::add_two_numbers(l1, l2), sol);
 }
