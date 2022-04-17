@@ -10,4 +10,4 @@
 #![allow(clippy::mutex_atomic)]
 #![allow(clippy::needless_collect)]
 
-mod add_two_sum;
+mod minimum_rounds_to_complete_all_tasks_4;

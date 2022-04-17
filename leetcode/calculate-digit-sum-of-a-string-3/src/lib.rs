@@ -10,4 +10,4 @@
 #![allow(clippy::mutex_atomic)]
 #![allow(clippy::needless_collect)]
 
-mod add_two_sum;
+mod calculate_digit_sum_of_a_string_3;

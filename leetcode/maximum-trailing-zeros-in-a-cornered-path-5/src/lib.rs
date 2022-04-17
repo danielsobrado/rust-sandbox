@@ -10,4 +10,4 @@
 #![allow(clippy::mutex_atomic)]
 #![allow(clippy::needless_collect)]
 
-mod add_two_sum;
+mod maximum_trailing_zeros_in_a_cornered_path_5;

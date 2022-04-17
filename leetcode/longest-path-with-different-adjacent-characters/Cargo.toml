@@ -1,5 +1,5 @@
 [package]
-name = "maximum-score-of-a-node-sequence"
+name = "longest-path-with-different-adjacent-characters"
 version = "0.1.0"
 edition = "2021"
 
