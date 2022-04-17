@@ -32,7 +32,12 @@ impl Solution {
             }
         }
 
-        true
+        if stack.is_empty() {
+            true
+        } else {
+            false
+        }
+
     }
 }
 
@@ -58,5 +63,5 @@ fn test4() {
 
 #[test]
 fn test5() {
-    assert_eq!(Solution::is_valid(String::from("((")), false);
+    assert_eq!(Solution::is_valid(String::from("([])")), true);
 }
