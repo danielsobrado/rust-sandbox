@@ -24,13 +24,14 @@ impl Solution {
         let result: Vec<char> = Vec::with_capacity(str.len());
 
         for (i, c) in str.chars().enumerate() {
-            let val: bool = strs.iter().chars.collect()
-                .inspect(|x| println!("about to filter: {}", x))
-                .filter(|&x| x[i] == c)
-                .inspect(|x| println!("made it through filter: {}", x))
-                .fold(false, |false, i| sum + i);
+            let found: bool = row.into_iter()  
+                .map(|it| { it.chars().nth(i).unwrap() == c })
+                .reduce(|acc, mk | acc && mk).unwrap();
+            if found {
+                result.push(c);
+            }
         }
-        String::from("")
+        result
     }
 }
 
