@@ -11,3 +11,4 @@
 #![allow(clippy::needless_collect)]
 
 mod longest_common_prefix;
+mod longest_common_prefix_v2;
