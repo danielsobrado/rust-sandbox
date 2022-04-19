@@ -10,5 +10,4 @@
 #![allow(clippy::mutex_atomic)]
 #![allow(clippy::needless_collect)]
 
-mod maximum_subarray;
-mod maximum_subarray_kadane;
+mod contains_duplicate;
