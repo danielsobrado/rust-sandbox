@@ -11,3 +11,4 @@
 #![allow(clippy::needless_collect)]
 
 mod merge_sorted_array;
+mod merge_sorted_array_vec;
