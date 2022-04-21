@@ -8,11 +8,30 @@ struct Solution;
 
 impl Solution {
     pub fn move_zeroes(nums: &mut Vec<i32>) {
+
         if nums.len() <= 1 {
             return;
         }
-        
-        
+
+        let mut i = nums.len() - 1;
+        while i >= 0 as usize {
+            if nums[i] == 0 && i != nums.len()-1 {
+                let mut j = i;
+                while j < nums.len()-1 {
+                    if nums[j+1] != 0  {
+                        nums.swap(j, j+1);
+                    } 
+                    j += 1;
+                }
+            }
+            if i != 0 as usize {
+                i -= 1;
+            } else {
+                return;
+            }
+        }
+        return;        
+
     }
 }
 
