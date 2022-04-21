@@ -10,7 +10,9 @@ impl Solution {
             return;
         }
 
-        (0..k).for_each(|_i| {
+        let rem = k % nums.len() as i32;
+
+        (0..rem).for_each(|_i| {
             for j in (1..nums.len()).rev() {
                 nums.swap(j-1, j);
             }
