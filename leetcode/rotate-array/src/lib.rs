@@ -11,4 +11,6 @@
 #![allow(clippy::needless_collect)]
 
 mod rotate_array_deque;
+mod rotate_array_reverse;
+mod rotate_array_last;
 mod rotate_array;
