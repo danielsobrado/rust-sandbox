@@ -11,3 +11,4 @@
 #![allow(clippy::needless_collect)]
 
 mod squares_of_a_sorted_array;
+mod squares_of_a_sorted_array_two_pointers;
