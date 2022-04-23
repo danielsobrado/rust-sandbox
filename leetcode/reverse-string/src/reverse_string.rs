@@ -7,9 +7,21 @@ struct Solution;
 
 impl Solution {
     pub fn reverse_string(s: &mut Vec<char>) {
+        if s.len() == 0 {
+            return;
+        }
+
+        let l = s.len();
         
+        for i in 0..l / 2 {
+            let temp = s[i];
+            s[i] = s[l - 1 - i];
+            s[l - 1 - i] = temp;
+        }
+
     }
 }
+
 #[test]
 fn test1() {
     let mut s = vec!['h', 'e', 'l', 'l', 'o'];
