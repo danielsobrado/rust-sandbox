@@ -7,6 +7,24 @@ struct Solution;
 
 impl Solution {
     pub fn reverse_str(s: String, k: i32) -> String {
+
+        let l = s.len();
+        let chars: Vec<char> = s.chars().collect();
+        let mut result = Vec::<char>::new();
+
+        for i in (0..l).step_by(k as usize) {
+            let mut end: usize = i + k as usize;
+            if end > l {
+                end = l;
+            }
+            let mut slice: Vec<char> = chars[i..end as usize].to_vec();
+            if i % (2 * k as usize) < k as usize {
+                slice.reverse();
+            } 
+            result.append(&mut slice);
+        }
+
+        result.iter().collect()
         
     }
 }
