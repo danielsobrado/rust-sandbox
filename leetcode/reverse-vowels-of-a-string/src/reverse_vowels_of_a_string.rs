@@ -5,8 +5,36 @@ struct Solution;
 // The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both cases.
 
 impl Solution {
+
+    pub fn is_vowel(c: char) -> bool {
+        match c {
+            'a' | 'e' | 'i' | 'o' | 'u' | 'A' | 'E' | 'I' | 'O' | 'U' => true,
+            _ => false,
+        }
+    }
+
     pub fn reverse_vowels(s: String) -> String {
         
+        let mut result: Vec<u8> = s.chars().map(|c| c as u8).collect();
+
+        let mut left = 0;
+        let mut right = s.len() - 1;
+
+        while left < right {
+            if Solution::is_vowel(*result.get(left).unwrap() as char) {
+                if Solution::is_vowel(*result.get(right).unwrap() as char) {
+                    result.swap(left, right);
+                    left += 1;
+                    right -= 1;
+                } else {
+                    right -= 1;
+                }
+            } else {
+                left += 1;
+            }
+        }
+
+        result.iter().map(|c| *c as char).collect()
     }
 }
 

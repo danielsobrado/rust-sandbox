@@ -20,4 +20,3 @@ fn test1() {
 fn test2() {
     assert_eq!(Solution::reverse_str(String::from("abcd"), 2), String::from("bacd"));
 }
-\
