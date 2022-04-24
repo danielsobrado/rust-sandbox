@@ -11,3 +11,4 @@
 #![allow(clippy::needless_collect)]
 
 mod reverse_vowels_of_a_string;
+mod reverse_vowels_of_a_string_bytes;
