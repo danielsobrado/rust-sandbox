@@ -27,12 +27,19 @@ impl Solution {
 
 #[test]
 fn test1() {
-    
-    assert_eq!(Solution::is_palindrome(None), true);
+    let head = Some(Box::new(ListNode::new(1)));
+    let head = Some(Box::new(ListNode::new(2)));
+    let head = Some(Box::new(ListNode::new(2)));
+    let head = Some(Box::new(ListNode::new(1)));
+
+    assert_eq!(Solution::is_palindrome(head), true);
 }
 
 #[test]
 fn test2() {
 
-    assert_eq!(Solution::is_palindrome(None), true);
+    let head = Some(Box::new(ListNode::new(1)));
+    let head = Some(Box::new(ListNode::new(2)));
+
+    assert_eq!(Solution::is_palindrome(head), false);
 }
