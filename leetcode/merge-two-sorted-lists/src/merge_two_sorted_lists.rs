@@ -29,9 +29,23 @@ impl Solution {
 
 #[test]
 fn test1() {
-    let list1 = Some(Box::new(ListNode::new(1)));
-    let list2 = Some(Box::new(ListNode::new(2)));
-    let result = Some(Box::new(ListNode::new(1)));
+  let n = ListNode::new(1);
+  let n = ListNode { val: 2, next: Some(Box::new(n)) };
+  let n = ListNode { val: 4, next: Some(Box::new(n)) };
+  let list1 = Some(Box::new(n));
+
+  let n = ListNode::new(1);
+  let n = ListNode { val: 3, next: Some(Box::new(n)) };
+  let n = ListNode { val: 4, next: Some(Box::new(n)) };
+  let list2 = Some(Box::new(n));
+
+  let n = ListNode::new(1);
+  let n = ListNode { val: 1, next: Some(Box::new(n)) };
+  let n = ListNode { val: 2, next: Some(Box::new(n)) };
+  let n = ListNode { val: 3, next: Some(Box::new(n)) };
+  let n = ListNode { val: 4, next: Some(Box::new(n)) };
+  let n = ListNode { val: 4, next: Some(Box::new(n)) };
+  let result = Some(Box::new(n));
 
     assert_eq!(Solution::merge_two_lists(list1, list2), result);
 }
