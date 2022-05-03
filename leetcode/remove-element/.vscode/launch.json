@@ -7,16 +7,16 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in library 'longest-common-prefix'",
+            "name": "Debug unit tests in library 'remove-element'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
                     "--lib",
-                    "--package=longest-common-prefix"
+                    "--package=remove-element"
                 ],
                 "filter": {
-                    "name": "longest-common-prefix",
+                    "name": "remove-element",
                     "kind": "lib"
                 }
             },

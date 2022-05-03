@@ -7,16 +7,16 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in library 'longest-common-prefix'",
+            "name": "Debug unit tests in library 'remove-duplicates-from-sorted-array'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
                     "--lib",
-                    "--package=longest-common-prefix"
+                    "--package=remove-duplicates-from-sorted-array"
                 ],
                 "filter": {
-                    "name": "longest-common-prefix",
+                    "name": "remove-duplicates-from-sorted-array",
                     "kind": "lib"
                 }
             },
