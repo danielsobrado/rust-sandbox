@@ -10,5 +10,4 @@
 #![allow(clippy::mutex_atomic)]
 #![allow(clippy::needless_collect)]
 
-mod longest_common_prefix;
-mod longest_common_prefix_v2;
+mod merge_two_sorted_lists;
