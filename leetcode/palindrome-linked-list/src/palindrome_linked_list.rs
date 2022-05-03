@@ -21,6 +21,23 @@ impl ListNode {
 }
 impl Solution {
     pub fn is_palindrome(head: Option<Box<ListNode>>) -> bool {
+        if head.unwrap().next.is_none() {
+            return true;
+        }
+        let mut slow = &head;
+        let mut fast = &head;
+        while fast.unwrap().next.is_some() {
+            slow = &slow.unwrap().next;
+            fast = &fast.unwrap().next.unwrap().next;
+        }
+        let mut reversed = slow.unwrap().next.unwrap();
+        let mut reversed_head = &reversed;
+        while reversed.next.is_some() {
+            let next = &reversed.next.unwrap();
+            reversed.next = next.next.clone();
+            next.next = reversed_head.clone();
+            reversed_head = next;
+        }
         
     }
 }
